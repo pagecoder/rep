@@ -16,7 +16,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-        setDutchVoice();
+        function setSlovakVoice() {
+            const voices = synth.getVoices();
+            const slovakVoice = voices.find(voice => voice.lang === 'sk-SK');
+            if (slovakVoice) {
+                utterance.voice = slovakVoice;
+                utterance.lang = 'sk-SK';
+                console.log('Slovak voice set:', slovakVoice);
+            } else {
+                console.log('No Slovak voice available');
+            }
+        }
+
+
+        //setDutchVoice();
+        setSlovakVoice();
         synth.onvoiceschanged = setDutchVoice;
 
         function processQueue() {
