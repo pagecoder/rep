@@ -1,0 +1,86 @@
+/* Default state */
+#pagecoder-speak-button {
+  color: red;
+  
+  margin:  0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  text-align: center;
+  font-size: 14px;
+  background-color: transparent;
+   
+    width: 120px;
+   
+    padding:  0;
+}
+
+#pagecoder-speak-button .fa {
+  margin-right: 10px;
+}
+
+/* Speaking state */
+#pagecoder-speak-button.speaking {
+  color: red;
+}
+
+#pagecoder-speak-button.speaking .fa {
+  animation: pulse 1.5s infinite;
+  color: red;
+}
+
+/* Paused state */
+#pagecoder-speak-button.paused {
+  color: grey;
+}
+
+#pagecoder-speak-button.paused .fa {
+  color: grey;
+}
+
+/* Animation for speaking icon */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ast-breadcrumbs-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ast-breadcrumbs-inner nav.breadcrumb-trail {
+    flex-grow: 1;
+}
+
+
+@media screen and (max-width: 990px){
+
+
+ .ast-breadcrumbs-inner #pagecoder-speak-button{
+align-self: flex-start;
+}
+
+}
